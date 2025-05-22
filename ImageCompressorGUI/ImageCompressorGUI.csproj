@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Platforms>AnyCPU;x64</Platforms>
+  
+    <TieredCompilation>true</TieredCompilation>
+    <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+    <TieredCompilationQuickJitForLoops>false</TieredCompilationQuickJitForLoops>
+    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+    <AssemblyName>Image Compressor</AssemblyName>
+    <ApplicationIcon>_256pxImageCompressorIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ImageCompressor\ImageCompressor.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CustomDialogs">
+      <HintPath>D:\Libraries\.NET Core\CustomDialogs\v1.4.4\dlls\64BitRel\CustomDialogs.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
